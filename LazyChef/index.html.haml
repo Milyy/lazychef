@@ -1,0 +1,85 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    / Scale Propety
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}/
+    / Title
+    %title LazyChef
+    / Stylesheets
+    %link{href: "css/style.css", rel: "stylesheet", type: "text/css"}/
+    / Google Fonts
+    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600", rel: "stylesheet", type: "text/css"}/
+    / Fav Icon
+    %link{href: "img/favicon.png", rel: "shortcut icon", type: "image/png"}/
+    / Google Analytics
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45276116-1', 'nixter.com');
+      ga('send', 'pageview');
+    / jQuery 1.7.2
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    / Script JS
+    %script{src: "js/modernizr.js", type: "text/javascript"}
+    / Modernizr
+    :javascript
+      Modernizr.load([ {
+      		// If browser supports touch
+      			test : Modernizr.touch,
+      				yep : 'js/mobile.js',
+      				nope :   'js/script.js'
+      			} ]);
+  %body
+    / Navigation Bar
+    %nav
+      .navLimit
+        %a#logo{href: "#"}
+          .navIcon
+          %p Lazy Chef
+        %ul.navMenu
+          %li.eraseForMobile
+            %a#guestlistLink{href: "#"} About Us
+          %li.eraseForMobile
+            %a#ticketsLink{href: "#"} Learn More
+          /
+            <li>
+            <a href="http://bit.ly/10Rq9D4" class="button navButton">Download Nixter</a>
+            </li>
+    #slide1.slide.eraseForMobile{"data-speed" => "2", "data-type" => "background"}
+      .iPhone
+    / Only For Mobile
+    .showOnMobile
+      %h1 You don't know what to cook without going out for shopping?
+    / General Box
+    .box.eraseForMobile
+      %h1 You don't know what to cook without going out for shopping?
+      %a#arrowLink{href: "#guestlist"}
+        .arrow.eraseForMobile.eraseFor720
+    #slide2.slide.eraseForMobile{"data-speed" => "1.5", "data-type" => "background"}
+    #guestlist
+    .box2
+      .main
+        .image.buy
+        %h1 You're not the only one, and we have the solution
+        %p Just scan barcodes of food in your kitchen and we will tell you what you can do with it.
+        %a#guestlistArrowLink{href: "#tickets"}
+          .arrow.eraseForMobile.eraseFor720
+    #slide3.slide{"data-speed" => "3.8", "data-type" => "background"}
+    #tickets
+    .box2
+      .main
+        .image.rsvp
+        %h1 You don't want to eat? What about a drink?!
+        %p EasyChef has beverage recipes too. Y U NO TRY IT?
+        %a#ticketsArrowLink{href: "#slide4"}
+          .arrow.eraseForMobile.eraseFor720
+    #slide4.slide{"data-speed" => "17.5", "data-type" => "background"}
+      .box3
+        %h1 Give us a try
+      %footer.eraseForMobile
+        .navLimit
+          %p.footerRight.eraseFor720 Developed by @aahnoqueatroh & @juanpintoduran on AHSCL 20013. Todos los derechos registrados y weá.
